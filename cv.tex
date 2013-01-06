@@ -1,0 +1,228 @@
+% Formatting "borrowed" from http://www.toofishes.net/blog/latex-resume-follow-up/
+% Originally used currvita but changed due to masses of excess whitespace
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above, bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Alex Smith}}
+
+
+alex@alexsmith.org\ \ \textbullet
+\ \ Primrose Hill, London\ \ \textbullet
+\ \ http://alexsmith.org
+\\
+EMEA +44 7525 909 332\ \ \textbullet
+\ \ APAC +65 8421 8597
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Objective}
+	My speciality is to drop in to any situation and quickly establish technical competency, regardless of the discipline involved. I thrive in a technical consultancy with a range of unusual and challenging clients. I would like to be able to apply this where I can have a high level of impact resulting in real change.
+	\\
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{KIT digital}}
+		{\textbf{London, UK}}
+	\headerrow
+		{\emph{Technical Architect}}
+		{\emph{01/2012 -- Present}}
+	\headerrow
+		{\textbf{ioko}}
+		{\textbf{London, UK}}	
+	\headerrow
+		{\emph{Technical Lead, Senior Engineer, Systems Engineer}}
+		{\emph{03/2008 -- 12/2011}}
+
+
+	KIT digital provides video on demand product development, ITIL managed services and technical consultancy/professional services to a range of clients, including Channel 4, BBC, AT\&T, and Disney. KIT digital purchased ioko in April 2011 to strengthen their professional services and technical development arm.    
+
+	\begin{itemize*}
+        \item Currently working as the principle technical authority on several projects, mentoring teams of engineers for the successful delivery of high profile platforms. Involvement ranging from advising C level executives on technical strategy to tracing system calls
+        \item Primary technical interface to clients, producing both high and low level designs, deep involvement in technical implementations, acting as the SME for a range of products (internal and external) and technologies
+        \item Key account contact for multiple customers, instrumental in both client retention and account development, through thorough technical assurance
+        \item Developed in-house skunkworks-style projects which have been adopted into the product development organization development, which form part of customer production systems
+        \item In addition to technical roles, taken on commercial, pre-sales and marketing responsibilities - including representing KIT digital at IBC - the main conference for broadcasters, and participating in several extensive proposals in both an architectural and commercial role
+        \item Knowledge of European, Middle Eastern and South East Asian video markets and working environments
+	\end{itemize*}
+	\subsection*{\emph{Projects}}
+		\begin{itemize}
+			\item 
+			\headerrow
+				{\textbf{TBA}}
+				{\textbf{Kuala Lumpur, Malaysia}}
+			\\
+			\headerrow
+				{\emph{Technical Architect}}
+				{\emph{Present}}
+		        An upcoming Video on Demand project, working with the region's largest cellular telephony company to deliver premium content to existing subscribers. 		Current role as infrastructure architect, specialising in the development of automated deployment systems and platform content delivery strategy.
+			\item 
+			\headerrow
+				{\textbf{Channel 4 Television Corporation}}
+				{\textbf{London, UK}}
+			\\
+			\headerrow
+				{\emph{Lead Infrastructure Architect}}
+				{\emph{2010 - 2012}}
+				Channel 4 is the UK's alternative public broadcaster. A heavy investor in technology, they aggressively target new devices, with a strategy underpinned by 		the use of public and private IaaS providers. Working as the primary infrastructure architect on a range of platforms, and final line of technical 		escalation for production issues.
+				\begin{itemize*}
+		            \item Development and implementation of an IaaS Management System across all Amazon EC2 and Private Cloud hosted sites
+		            \item Lead Infrastructure Architect:
+		            \begin{itemize*}
+		                \item 4oD on PS3, iOS, and XBox 360 (winner of the IBC 2012 Innovation in Content Delivery Award)
+		                \item Platform Re-architecture (to AWS)
+		                \item 4Music 2011 Re-launch (http://www.4music.com/)
+		                \item Food Hospital (http://foodhospital.channel4.com)
+		                \item Scrapbook (http://scrapbook.channel4.com)
+		                \item Great British Property Scandal
+		            \end{itemize*}
+		        \end{itemize*}
+		
+		    \item 
+			\headerrow
+				{\textbf{FilmFlex (Film4oD, Virgin On Demand, hmvon-demand)}}
+				{\textbf{London, UK}}
+			\\
+			\headerrow
+				{\emph{Infrastructure Platform Owner}}
+				{\emph{2009 - Present}}
+		        FilmFlex is a UK Movies on Demand service. Acting as the internal infrastructure platform owner for this platform within KIT digital, and managing and maintaining the strategic platform architecture. During the tenure with FilmFlex, the platform has taken on three new affiliates, launched on mobile devices, and had a daily transaction rate increase of several orders of magnitude.
+		    \item 
+			\headerrow
+				{\textbf{SeeSaw.com / Project Kangaroo}}
+				{\textbf{London, UK}}
+			\\
+			\headerrow
+				{\emph{Various}}
+				{\emph{2008 - 2010}}
+		        Project Kangaroo was initially IPTV venture by the BBC, Channel 4 and ITV, later launched as SeeSaw.com. Worked first in the application support team, transitioned to primary project engineer, and lead the architecture of the data warehousing and reporting components.
+		    \item 
+			\headerrow
+				{\textbf{FOXTEL}}
+				{\textbf{Sydney, Australia}}
+			\\
+			\headerrow
+				{\emph{Senior Engineer}}
+				{\emph{2010}}
+		        FOXTEL is an Australian premium television company. Originally joining the team to aid the implementation, travelled to Australia to provide technical assurance for meeting aggressive launch dates for the new FOXTEL on Xbox 360 platform.
+		    \item 
+			\headerrow
+				{\textbf{BBC Monitoring}}
+				{\textbf{UK}}
+			\\
+			\headerrow
+				{\emph{Senior Engineer}}
+				{\emph{2009}}
+		        BBC Monitoring is a commercial arm of the BBC, which provides signal intelligence across various data sources. ioko provided technical consultancy for the infrastructure and application deployments. Challenges included rapid deployment of a large estate, systems automation on Solaris 10, vast signal acquisition, multi-site fully redundancy with data replication (both ZFS and Oracle RDBMS).
+		
+\end{itemize}
+
+	\item
+	\headerrow
+		{\textbf{Venda, Inc.}}
+		{\textbf{London, UK}}
+	\\
+	\headerrow
+		{\emph{Systems Administrator}}
+		{\emph{Jul 2007 -- Mar 2008}}
+
+		Venda, Inc. is the world's largest SaaS e-commerce provider for the world's leading retailers and manufacturers. Their PCI-DSS Tier One compliant platform handles hundreds of transactions per second across multiple sites.
+
+	\begin{itemize*}
+        \item Primary technical resource for the 2007 Christmas hardware refresh
+        \item Developed technical troubleshooting skills through first and second line support ticket work
+        \item Developed a strong knowledge of HTTP technologies, working with a complex transactional web delivery estate
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{aql}}
+		{\textbf{Leeds, UK}}
+	\\
+	\headerrow
+		{\emph{Systems Support \& Software Development}}
+		{\emph{2004 -- 2006 (various)}}
+
+		aql are an award winning VoIP company based in the North of England. Working at aql, my responsibilities included dealing directly with clients to diagnose their needs and tailor a system to meet these. Whilst working at aql I acquired skills working with Asterisk (incl. Asterisk Realtime), SMS/MMS/WAP technologies, and both wired/wireless VoIP hardware/software systems.
+
+	\begin{itemize*}
+		\item Development of internal systems and toolchains
+		\item Implementation of Mobile Messaging (SMS/MMS/SMPP) and VoIP Systems (SIP) using Asterisk (incl. Asterisk Realtime)
+		\item First and second line support and ticket management
+	\end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Technologies:]
+	Nginx, Varnish, Apache, RiverBed STM, Puppet, Tomcat, Jetty, MongoDB, Oracle RDBMS, MySQL, Cisco IOS, Juniper JunOS, CheckPoint FW-1, VMware ESX, Solaris 10 Zones, Xen, KVM, Private Cloud (Eucalyptus/OpenStack), NetApp, EMC, Nagios, RT
+	\item[Languages:]
+	Python, Java (management), \LaTeX, Perl, Python, shell script, SQL
+\end{description*}
+\end{indentsection}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Talks}
+    \headerrow
+		{Test Driven Infrastructure (Internal - KIT)}
+		{June 2012}
+    \headerrow
+		{MongoDB For an RDBMS DBA (Internal - KIT)}
+		{May 2012}
+    \headerrow
+		{DevOps in an ITIL Environment (VMware London, internal - KIT)}
+		{Sep 2011 / Jan 2012}
+
+\end{document}
